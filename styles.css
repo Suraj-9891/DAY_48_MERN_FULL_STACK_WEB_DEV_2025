@@ -1,0 +1,243 @@
+/* General Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #a28efa;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+/* Container to Hold All Sections */
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    width: 100%;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Toolbar Section */
+.toolbar {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    background-color: #2e3b4e;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.toolbar button {
+    padding: 12px;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.toolbar button:hover {
+    background-color: #45a049;
+}
+
+.toolbar button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Image Preview Section */
+.image-preview {
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+#imageCanvas {
+    border: 1px solid #ccc;
+    width: 500px;
+    height: 500px;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+.image-preview input[type="range"] {
+    width: 100%;
+}
+
+#zoom {
+    margin-top: 10px;
+}
+
+/* Layer Panel */
+.layer-panel {
+    width: 220px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 20px;
+}
+
+.layer-panel h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.layer-panel ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.layer-panel li {
+    padding: 10px;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.layer-panel li:hover {
+    background-color: #e0e0e0;
+}
+
+.layer-panel li.active {
+    background-color: #c8e6c9;
+}
+
+/* History Panel */
+.history-panel {
+    width: 220px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 20px;
+}
+
+.history-panel h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.history-panel ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.history-panel li {
+    padding: 8px;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.history-panel li:hover {
+    background-color: #e0e0e0;
+}
+
+/* Settings Panel */
+.settings-panel {
+    width: 250px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.settings-panel h3 {
+    margin-top: 0;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.settings-panel label {
+    font-size: 14px;
+    color: #333;
+    margin-top: 10px;
+}
+
+.settings-panel input[type="range"] {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.settings-panel input[type="range"]:focus {
+    outline: none;
+}
+
+/* Buttons for Download, Reset and Previous */
+button {
+    padding: 12px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+
+/* Miscellaneous */
+h1, h2, h3 {
+    color: #333;
+}
+
+label {
+    font-weight: bold;
+}
+
+/* Tooltips */
+.tooltip {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+button:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}

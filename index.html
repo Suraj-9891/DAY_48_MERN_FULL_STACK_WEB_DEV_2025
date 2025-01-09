@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Editing Tool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Toolbar Section -->
+        <div class="toolbar">
+            <button id="uploadBtn">Upload Image</button>
+            <button id="cropBtn">Crop</button>
+            <button id="resizeBtn">Resize</button>
+            <button id="rotateBtn">Rotate</button>
+            <button id="flipBtn">Flip</button>
+            <button id="brightnessBtn">Adjust Brightness</button>
+            <button id="contrastBtn">Adjust Contrast</button>
+            <button id="saturationBtn">Adjust Saturation</button>
+            <button id="filterBtn">Apply Filter</button>
+            <button id="resetBtn">Reset</button>
+            <button id="prevBtn">Previous</button>
+        </div>
+
+        <!-- Image Preview Section -->
+        <div class="image-preview">
+            <canvas id="imageCanvas"></canvas>
+            <div>
+                <button id="downloadBtn">Download Image</button>
+            </div>
+            <div>
+                <label for="zoom">Zoom:</label>
+                <input type="range" id="zoom" min="0.5" max="3" step="0.1" value="1">
+            </div>
+        </div>
+
+        <!-- Layer Panel -->
+        <div class="layer-panel">
+            <h3>Layers</h3>
+            <ul id="layerList">
+                <!-- Layers will be listed here dynamically -->
+            </ul>
+        </div>
+
+        <!-- History Panel -->
+        <div class="history-panel">
+            <h3>History</h3>
+            <ul id="historyList">
+                <!-- Edit history will be listed here dynamically -->
+            </ul>
+        </div>
+
+        <!-- Settings Panel -->
+        <div class="settings-panel">
+            <h3>Adjust Image Settings</h3>
+            <label for="brightness">Brightness</label>
+            <input type="range" id="brightness" min="0" max="2" step="0.1" value="1">
+            <label for="contrast">Contrast</label>
+            <input type="range" id="contrast" min="0" max="2" step="0.1" value="1">
+            <label for="saturation">Saturation</label>
+            <input type="range" id="saturation" min="0" max="2" step="0.1" value="1">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
